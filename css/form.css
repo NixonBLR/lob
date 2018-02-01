@@ -1,0 +1,60 @@
+/* Общие стили */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&subset=cyrillic');
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html {max-width: 2000px; margin: 0 auto;}
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	background-color: #bcbcbc;
+	font-family: "Comic Sans MS", "Open Sans", Arial, sans-serif;
+}
+
+#root {
+	margin: auto;
+	width: 80%;
+	height: 80vh;
+	text-align: center;
+}
+
+h1, p {margin: 20px;} 
+
+#root div, #root div div {
+	border-radius: 10px;
+	width: 60%;
+	height: 50px;
+	background: linear-gradient(to bottom, #444, #fff 50%, #444);
+	margin: 20px auto;
+}
+
+#root div div {
+	width: 5%;
+	border: none;
+	background: linear-gradient(to bottom, #000, #fff 47%, #000);
+	margin: 0;
+	position: relative;
+	left: 0;
+		-webkit-animation-name: loading; /* Safari 4.0 - 8.0 */
+		-webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+		-webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+		-webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+	animation-name: loading;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes loading{
+  0% {left: 0%;}
+  50% {left: 95%;}
+  100% {left: 0%;}
+}
+/* Standard syntax */
+@keyframes loading{
+  0% {left: 0%;}
+  50% {left: 95%;}
+  100% {left: 0%;}
+}
+
+/* Медиа-запросы */
